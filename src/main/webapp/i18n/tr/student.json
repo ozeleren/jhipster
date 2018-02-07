@@ -1,0 +1,28 @@
+{
+    "jhipsterApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "Create a new Student",
+                "createOrEditLabel": "Create or edit a Student",
+                "search": "Search for Student"
+            },
+            "created": "A new Student is created with identifier {{ param }}",
+            "updated": "A Student is updated with identifier {{ param }}",
+            "deleted": "A Student is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "fname": "Fname",
+            "sname": "Sname",
+            "gpa": "Gpa",
+            "enrollmentDate": "Enrollment Date",
+            "birthDate": "Birth Date",
+            "expectedGraduationDate": "Expected Graduation Date",
+            "department": "Department"
+        }
+    }
+}

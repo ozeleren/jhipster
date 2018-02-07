@@ -1,0 +1,24 @@
+{
+    "jhipsterApp": {
+        "take" : {
+            "home": {
+                "title": "Takes",
+                "createLabel": "Create a new Take",
+                "createOrEditLabel": "Create or edit a Take",
+                "search": "Search for Take"
+            },
+            "created": "A new Take is created with identifier {{ param }}",
+            "updated": "A Take is updated with identifier {{ param }}",
+            "deleted": "A Take is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Take {{ id }}?"
+            },
+            "detail": {
+                "title": "Take"
+            },
+            "grade": "Grade",
+            "student": "Student",
+            "course": "Course"
+        }
+    }
+}

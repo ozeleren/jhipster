@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "course",
+            "otherEntityName": "course",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "instructor",
+            "otherEntityName": "instructor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20180205090301",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "teach",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

@@ -1,0 +1,36 @@
+
+<div *ngIf="instructor">
+    <h2><span jhiTranslate="jhipsterApp.instructor.detail.title">Instructor</span> {{instructor.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jhipsterApp.instructor.fname">Fname</span></dt>
+        <dd>
+            <span>{{instructor.fname}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterApp.instructor.lname">Lname</span></dt>
+        <dd>
+            <span>{{instructor.lname}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterApp.instructor.department">Department</span></dt>
+        <dd>
+            <div *ngIf="instructor.department">
+                <a [routerLink]="['/department', instructor.department?.id]">{{instructor.department?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'instructor/'+ instructor.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "student",
+            "otherEntityName": "student",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "course",
+            "otherEntityName": "course",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "grade",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20180205085852",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "take",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

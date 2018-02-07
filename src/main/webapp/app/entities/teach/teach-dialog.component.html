@@ -1,0 +1,39 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myTeachLabel" jhiTranslate="jhipsterApp.teach.home.createOrEditLabel">Create or edit a Teach</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!teach.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="teach.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterApp.teach.course" for="field_course">Course</label>
+            <select class="form-control" id="field_course" name="course" [(ngModel)]="teach.course" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="courseOption.id === teach.course?.id ? teach.course : courseOption" *ngFor="let courseOption of courses; trackBy: trackCourseById">{{courseOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterApp.teach.instructor" for="field_instructor">Instructor</label>
+            <select class="form-control" id="field_instructor" name="instructor" [(ngModel)]="teach.instructor" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="instructorOption.id === teach.instructor?.id ? teach.instructor : instructorOption" *ngFor="let instructorOption of instructors; trackBy: trackInstructorById">{{instructorOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

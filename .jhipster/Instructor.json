@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "department",
+            "otherEntityName": "department",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "fname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "lname",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180205090032",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "instructor",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
